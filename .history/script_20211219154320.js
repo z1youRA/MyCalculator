@@ -34,20 +34,19 @@ function operate() {
 }
 
 function clear() { //wating to be applied to AC function.
-    input.value = '';
-    num1 = '';
-    num2 = '';
-    operator = '';
-    result = '';
+    let num1 = '';
+    let num2 = '';
+    let operator = '';
+    let result = '';
 }
 
 function inputNum() {
-    if(flag === 1 && num2 === '') { //clear the screen when input the second operand.
+    if(operator !== '') { //clear the screen when input the second operand.
         input.value = '';
     }
     const number = this.textContent;
     input.value += number;
-    if(flag === 0) {
+    if(num1 === '') {
         num1 += number;
     }
     else 
@@ -64,10 +63,8 @@ function inputOperator() {
     }
     operator = this.textContent;
     num1 = input.value;
-    flag = 1;
 }
 
-let flag = 0; //if num1 exists flag == 1
 let num1 = '';
 let num2 = '';
 let operator = '';

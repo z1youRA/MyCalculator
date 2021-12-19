@@ -34,11 +34,10 @@ function operate() {
 }
 
 function clear() { //wating to be applied to AC function.
-    input.value = '';
-    num1 = '';
-    num2 = '';
-    operator = '';
-    result = '';
+    let num1 = '';
+    let num2 = '';
+    let operator = '';
+    let result = '';
 }
 
 function inputNum() {

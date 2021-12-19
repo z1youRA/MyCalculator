@@ -17,12 +17,15 @@ function divide(num1, num2) {
 function operate() {
     if(operator === '+') {
         result = add(num1, num2);
+        input.value = result.toFixed(12);
     }
     if(operator === '-') {
         result = subtract(num1, num2);
+        input.value = result.toFixed(12);
     }
     if(operator === '*'|| operator === 'x') {
         result = multiply(num1, num2);
+        input.value = result.toFixed(12);
     }
     if(operator === '/'|| operator === '÷') {
         if(num2 == 0) {
@@ -31,9 +34,8 @@ function operate() {
             return;
         }
         result = divide(num1, num2);
+        input.value = result.toFixed(12);
     }
-    input.value = Math.round(result * 100000) / 100000;
-
 }
 
 function clear() { 

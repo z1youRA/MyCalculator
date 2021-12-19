@@ -16,13 +16,16 @@ function divide(num1, num2) {
 
 function operate() {
     if(operator === '+') {
-        result = add(num1, num2);
+        input.value = add(num1, num2);
+        result = input.value;
     }
     if(operator === '-') {
-        result = subtract(num1, num2);
+        input.value = subtract(num1, num2);
+        result = input.value;
     }
     if(operator === '*'|| operator === 'x') {
-        result = multiply(num1, num2);
+        input.value = multiply(num1, num2);
+        result = input.value;
     }
     if(operator === '/'|| operator === '÷') {
         if(num2 == 0) {
@@ -30,10 +33,9 @@ function operate() {
             input.value = 'ERROR';
             return;
         }
-        result = divide(num1, num2);
+        input.value = divide(num1, num2);
+        result = input.value;
     }
-    input.value = Math.round(result * 100000) / 100000;
-
 }
 
 function clear() { 
@@ -51,12 +53,8 @@ function inputNum() {
         input.value = '';
     }
     const number = this.textContent;
-    if(number === '.') {
-        if(pointFlag === 1) {
-            return;   
-        }
-        pointFlag = 1;
-    }
+    if(number = '.')
+        console.log('!!';)
     input.value += number;
     if(flag === 0) {
         num1 += number;
@@ -75,7 +73,6 @@ function inputOperator() {
     }
     operator = this.textContent;
     flag = 1;
-    pointFlag = 0;
 }
 
 let flag = 0; //if num1 exists flag == 1

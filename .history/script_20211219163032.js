@@ -32,7 +32,7 @@ function operate() {
         }
         result = divide(num1, num2);
     }
-    input.value = Math.round(result * 100000) / 100000;
+    input.value = Math.round(result * 10000) / 10000;
 
 }
 

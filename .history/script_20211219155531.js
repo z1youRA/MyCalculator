@@ -39,7 +39,6 @@ function clear() { //wating to be applied to AC function.
     num2 = '';
     operator = '';
     result = '';
-    flag = 0;
 }
 
 function inputNum() {

@@ -16,7 +16,6 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -27,7 +26,7 @@ body {
     padding: 20px;
     border-radius: 10px;
     display: flex;
-    border: solid var(--border);
+    border: solid;
     width: 400px;
     justify-content: center;
     flex-direction: column;
@@ -35,7 +34,6 @@ body {
 }
 
 input {
-    padding-left: 10px;
     font-size: 30px;
     height: 60px;
     margin-bottom: 10px;

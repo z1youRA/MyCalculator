@@ -16,7 +16,6 @@
 }
 
 body {
-    font-family: Arial, Helvetica, sans-serif;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,22 +23,15 @@ body {
 }
 
 .container {
-    padding: 20px;
-    border-radius: 10px;
     display: flex;
-    border: solid var(--border);
     width: 400px;
     justify-content: center;
     flex-direction: column;
-    background-color: var(--background);
 }
 
 input {
-    padding-left: 10px;
-    font-size: 30px;
     height: 60px;
     margin-bottom: 10px;
-    border-radius: 10px;
 }
 
 .span-2 {
@@ -55,13 +47,7 @@ input {
 .back {
     background-color: var(--btn-red);
 }
-.clear {
-    background-color: var(--btn-blue);
-}
 
 button {
-    font-size: 20px;
-    font-weight: normal;
-    border-radius: 10px;
     padding: 20px;
 }

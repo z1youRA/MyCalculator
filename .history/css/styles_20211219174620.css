@@ -1,0 +1,33 @@
+body {
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    display: flex;
+    width: 400px;
+    justify-content: center;
+    flex-direction: column;
+}
+
+input {
+    height: 60px;
+    margin-bottom: 10px;
+}
+
+.span-2 {
+    grid-column: span 2;
+    border: solid;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+
+
+button {
+    padding: 20px;
+}

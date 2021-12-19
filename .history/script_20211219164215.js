@@ -85,7 +85,6 @@ function back() {
     }
     else if(flag === 1 && num2.length > 0){
         num2 = num2.slice(0, num2.length - 1);
-        input.value = num2;
     }
 }
 

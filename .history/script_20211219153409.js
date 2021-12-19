@@ -51,12 +51,12 @@ function inputNum() {
 }
 
 function inputOperator() {
-    if(num1 !== '' && num2 !== '' && operator !== '') { //if user didn't press the = button each time.
-        operate();
-    }
-    if(result != '') { //for a second successive operation
+    if(result != '') { //if user didn't press = each time.
         num1 = result;
         num2 = '';
+        operate();
+        input.value = result;
+        return;
     }
     operator = this.textContent;
     num1 = input.value;

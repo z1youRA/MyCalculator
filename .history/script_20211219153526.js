@@ -51,9 +51,6 @@ function inputNum() {
 }
 
 function inputOperator() {
-    if(num1 !== '' && num2 !== '' && operator !== '') { //if user didn't press the = button each time.
-        operate();
-    }
     if(result != '') { //for a second successive operation
         num1 = result;
         num2 = '';

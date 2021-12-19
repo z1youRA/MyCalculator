@@ -15,6 +15,7 @@ function divide(num1, num2) {
 }
 
 function operate() {
+    num2 = input.value;
     if(operator === '+') {
         input.value = add(num1, num2);
         result = input.value;
@@ -33,30 +34,25 @@ function operate() {
     }
 }
 
-function clear() { //wating to be applied to AC function.
+function clear() {
     input.value = '';
 }
 
 function inputNum() {
-    if(num1 !== '') { //clear the screen when input the second operand.
-        input.value = '';
+    if(num1 !== '') {
+        clear();
     }
     const number = this.textContent;
     input.value += number;
-    if(num1 === '') {
-        num1 += number;
-    }
-    else 
-        num2 += number;
 }
 
 function inputOperator() {
-    if(num1 !== '' && num2 !== '' && operator !== '') { //if user didn't press the = button each time.
+    if(num1 !== '' && num2 !== '' && operator !== '') { //if user didn't press = each time.
+        console.log('hello');
         operate();
-    }
-    if(result != '') { //for a second successive operation
         num1 = result;
-        num2 = '';
+        input.value = result;
+        return;
     }
     operator = this.textContent;
     num1 = input.value;

@@ -52,6 +52,7 @@ function inputNum() {
 
 function inputOperator() {
     if(num1 !== '' && num2 !== '' && operator !== '') { //if user didn't press the = button each time.
+        console.log("s");
         operate();
     }
     if(result != '') { //for a second successive operation

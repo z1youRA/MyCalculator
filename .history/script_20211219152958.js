@@ -33,17 +33,17 @@ function operate() {
     }
 }
 
-function clear() { //wating to be applied to AC function.
+function clear() {
     input.value = '';
 }
 
 function inputNum() {
     if(num1 !== '') { //clear the screen when input the second operand.
-        input.value = '';
+        clear();
     }
     const number = this.textContent;
     input.value += number;
-    if(num1 === '') {
+    if(num1 !== '') {
         num1 += number;
     }
     else 
@@ -51,12 +51,14 @@ function inputNum() {
 }
 
 function inputOperator() {
-    if(num1 !== '' && num2 !== '' && operator !== '') { //if user didn't press the = button each time.
+    console.log(num1);
+    console.log(num2);
+    console.log(operator);
+    if(num1 !== '' && num2 !== '' && operator !== '') { //if user didn't press = each time.
         operate();
-    }
-    if(result != '') { //for a second successive operation
         num1 = result;
-        num2 = '';
+        input.value = result;
+        return;
     }
     operator = this.textContent;
     num1 = input.value;
